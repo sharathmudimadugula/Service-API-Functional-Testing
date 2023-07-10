@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<suite name="5gencare api automation">
+
+	<parameter name="baseURI"
+		value="https://dev-service.ctiotsolution.com/api/v1/" />
+
+	<parameter name="baseURI1"
+		value="https://dev-cube.ctiotsolution.com/cubejs-api/graphql" />
+
+
+	<test name="Positive API Automation">
+		<classes>
+			<class name="com.gencare.api.tests.LoginAPITest" />
+		<class name="com.gencare.api.tests.OccupantsTest" />
+			<class name="com.gencare.api.tests.HomeTest" />
+			<class name="com.gencare.api.tests.DashboardAttributesTest" />
+			 <class name="com.gencare.api.tests.GroupsTest"/>
+			<class name="com.gencare.api.tests.PermissionsTest" />
+			<class name="com.gencare.api.tests.AlertsTest" />
+			<class name="com.gencare.api.tests.RuleGroupsTest" />
+			<class name="com.gencare.api.tests.NotificationTokensTest" />
+			
+		</classes>
+	</test>
+
+	<test name="Negative API Automation">
+		<classes>
+			<class name="com.gencare.login.negative.LoginNegativeAPITest" />
+			<class name="com.gencare.occupants.negative.OccupantsNegative" />
+			<class name="com.gencare.home.negative.HomeTest"/>
+			<class name="com.gencare.groups.negative.GroupsNegativeTest"/>
+			<class name="com.gencare.rulegroup.negative.RuleGroupsNegativeTest" />
+			<class name="com.gencare.alerts.negative.AlertsNegativeTest" />
+			<class
+				name="com.gencare.dashboardattributes.negative.DashboardAttributesTest" />
+			<class
+			name="com.gencare.notificationtoken.negative.tests.NotificationTokensNegativeTests"
+			/>
+			   <class name="com.gencare.devices.negative.DevicesNegativeTest"/>
+			<class name="com.gencare.permissions.negative.PermissionsNegative" />
+
+		</classes>
+	</test>
+</suite>
